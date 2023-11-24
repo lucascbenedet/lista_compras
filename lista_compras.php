@@ -123,12 +123,15 @@ $itens_comprados = $stmt->fetchAll(PDO::FETCH_ASSOC)
         }
 
         .novo-item {
+            display: flex;
             text-align: center;
             margin: 10px;
             padding: 20px;
             background-color: #333;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            align-items: center;
         }
 
         label {
@@ -139,8 +142,8 @@ $itens_comprados = $stmt->fetchAll(PDO::FETCH_ASSOC)
         }
 
         .input-novo-item {
-            width: 80%;
-            padding: 8px;
+            width: 50%;
+            padding: 15px;
             margin-bottom: 10px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -276,7 +279,7 @@ $itens_comprados = $stmt->fetchAll(PDO::FETCH_ASSOC)
                         <form action="" method="post">
                             <input type="hidden" name="nao-comprado" value="<?php echo $item['id']; ?>">
 
-                            <button name="teste" type="submit" style="background: none; border: none; cursor: pointer;">⚪ <?php echo $item['nome_item']; ?></button>
+                            <button name="teste" type="submit" style="color: #12bce9; background: none; border: none; cursor: pointer;">⚪ <?php echo $item['nome_item']; ?></button>
 
                         </form>
                         <form method="post">
